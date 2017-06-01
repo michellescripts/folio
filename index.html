@@ -11,15 +11,42 @@
       <!-- styled in CSS -->
     </header>
     <nav class="container">
-      <a href="index.html">About</a>
+      <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
-      <a href="#">Contact</a>
       <a href="#">Blog</a>
+      <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">MORE</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="https://github.com/mihshhehl">Github</a>
+        <a href="linkedin.com/in/mihshhehl">LinkedIn</a>
+        <!-- <a href="#">email</a> -->
+      </div>
+    </div>
     </nav>
     <div class="line"></div>
     <main>
-
+        <img src="./assets/images/comp.jpg" alt="" class="computer">
     </main>
+    <script type="text/javascript">
+       /* When the user clicks on the button,
+       toggle between hiding and showing the dropdown content */
+       function myFunction() {
+           document.getElementById("myDropdown").classList.toggle("show");
+       }
 
+       // Close the dropdown menu if the user clicks outside of it
+       window.onclick = function(event) {
+         if (!event.target.matches('.dropbtn')) {
+     var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
   </body>
 </html>
